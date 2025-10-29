@@ -1,0 +1,9 @@
+{
+  "query": "ALTER TABLE stories \n  MODIFY COLUMN mediaUrl text NULL,\n  MODIFY COLUMN mediaType enum('image','video','text') NOT NULL,\n  ADD COLUMN IF NOT EXISTS backgroundColor varchar(50) NULL,\n  ADD COLUMN IF NOT EXISTS textElements text NULL,\n  ADD COLUMN IF NOT EXISTS stickerElements text NULL,\n  ADD COLUMN IF NOT EXISTS locationData text NULL,\n  ADD COLUMN IF NOT EXISTS professionBadge text NULL",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3WA8gswNK9kepfn.6d9c26cfb25d --database ZWyrq4iC867CWCNN6BBEWU --execute ALTER TABLE stories \n  MODIFY COLUMN mediaUrl text NULL,\n  MODIFY COLUMN mediaType enum('image','video','text') NOT NULL,\n  ADD COLUMN IF NOT EXISTS backgroundColor varchar(50) NULL,\n  ADD COLUMN IF NOT EXISTS textElements text NULL,\n  ADD COLUMN IF NOT EXISTS stickerElements text NULL,\n  ADD COLUMN IF NOT EXISTS locationData text NULL,\n  ADD COLUMN IF NOT EXISTS professionBadge text NULL",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 3256
+}

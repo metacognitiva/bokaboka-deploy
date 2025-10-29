@@ -1,0 +1,9 @@
+{
+  "query": "INSERT INTO categories (name) VALUES \n('Bugreiro'),\n('Guia Turístico'),\n('Cuidador de Idosos e Enfermos'),\n('Babá'),\n('Técnico de Enfermagem'),\n('Cuidados de Automóveis'),\n('Consultor Automotivo');",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3WA8gswNK9kepfn.6d9c26cfb25d --database ZWyrq4iC867CWCNN6BBEWU --execute INSERT INTO categories (name) VALUES \n('Bugreiro'),\n('Guia Turístico'),\n('Cuidador de Idosos e Enfermos'),\n('Babá'),\n('Técnico de Enfermagem'),\n('Cuidados de Automóveis'),\n('Consultor Automotivo');",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 75
+}

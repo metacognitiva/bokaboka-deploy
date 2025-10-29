@@ -1,0 +1,24 @@
+{
+  "query": "SELECT id, uid, displayName, category, city FROM professionals WHERE displayName LIKE '%Diego Macedo%';",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3WA8gswNK9kepfn.6d9c26cfb25d --database ZWyrq4iC867CWCNN6BBEWU --execute SELECT id, uid, displayName, category, city FROM professionals WHERE displayName LIKE '%Diego Macedo%';",
+  "rows": [
+    {
+      "id": "150001",
+      "uid": "robwqds4",
+      "displayName": "Diego Macedo Gonçalves ",
+      "category": "Psicólogo ",
+      "city": "Natal - RN"
+    },
+    {
+      "id": "240001",
+      "uid": "1xd2vnsk",
+      "displayName": "Diego Macedo Gonçalves",
+      "category": "Advogado Criminalista",
+      "city": "Natal - RN"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\tuid\tdisplayName\tcategory\tcity\n150001\trobwqds4\tDiego Macedo Gonçalves \tPsicólogo \tNatal - RN\n240001\t1xd2vnsk\tDiego Macedo Gonçalves\tAdvogado Criminalista\tNatal - RN\n",
+  "stderr": "",
+  "execution_time_ms": 45
+}

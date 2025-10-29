@@ -1,0 +1,22 @@
+{
+  "query": "SELECT uid, displayName FROM professionals WHERE displayName LIKE '%David%' OR displayName LIKE '%Davi%' OR displayName LIKE '%Allison%' OR displayName LIKE '%Alison%';",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3WA8gswNK9kepfn.6d9c26cfb25d --database ZWyrq4iC867CWCNN6BBEWU --execute SELECT uid, displayName FROM professionals WHERE displayName LIKE '%David%' OR displayName LIKE '%Davi%' OR displayName LIKE '%Allison%' OR displayName LIKE '%Alison%';",
+  "rows": [
+    {
+      "uid": "yr631b46",
+      "displayName": "Allison Araújo Barbosa "
+    },
+    {
+      "uid": "w9qsgdmz",
+      "displayName": "Allison Araújo Barbosa "
+    },
+    {
+      "uid": "a0rcgphh",
+      "displayName": "David Guilherme Macedo de Sousa"
+    }
+  ],
+  "messages": [],
+  "stdout": "uid\tdisplayName\nyr631b46\tAllison Araújo Barbosa \nw9qsgdmz\tAllison Araújo Barbosa \na0rcgphh\tDavid Guilherme Macedo de Sousa\n",
+  "stderr": "",
+  "execution_time_ms": 47
+}

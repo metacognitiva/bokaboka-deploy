@@ -1,0 +1,20 @@
+{
+  "query": "SELECT uid, displayName, photoUrl FROM professionals WHERE displayName LIKE '%Maria Eduarda%' AND category LIKE '%Psic%';",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3WA8gswNK9kepfn.6d9c26cfb25d --database ZWyrq4iC867CWCNN6BBEWU --execute SELECT uid, displayName, photoUrl FROM professionals WHERE displayName LIKE '%Maria Eduarda%' AND category LIKE '%Psic%';",
+  "rows": [
+    {
+      "uid": "d4l4iplt",
+      "displayName": "Maria Eduarda de Araújo Nóbrega",
+      "photoUrl": "https://files.manuscdn.com/user_upload_by_module/session_file/310419663030984273/KgThFExdbcZanSyB.jpeg"
+    },
+    {
+      "uid": "gbyyvvq3",
+      "displayName": "Maria Eduarda de Araújo Nóbrega",
+      "photoUrl": "https://files.manuscdn.com/user_upload_by_module/session_file/310419663030984273/KgThFExdbcZanSyB.jpeg"
+    }
+  ],
+  "messages": [],
+  "stdout": "uid\tdisplayName\tphotoUrl\nd4l4iplt\tMaria Eduarda de Araújo Nóbrega\thttps://files.manuscdn.com/user_upload_by_module/session_file/310419663030984273/KgThFExdbcZanSyB.jpeg\ngbyyvvq3\tMaria Eduarda de Araújo Nóbrega\thttps://files.manuscdn.com/user_upload_by_module/session_file/310419663030984273/KgThFExdbcZanSyB.jpeg\n",
+  "stderr": "",
+  "execution_time_ms": 54
+}

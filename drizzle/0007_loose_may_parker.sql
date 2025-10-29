@@ -1,0 +1,1 @@
+ALTER TABLE `users` ADD `userType` enum('client','professional','none') DEFAULT 'none' NOT NULL;

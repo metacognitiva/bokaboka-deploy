@@ -1,0 +1,274 @@
+{
+  "query": "DESCRIBE professionals;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3WA8gswNK9kepfn.6d9c26cfb25d --database ZWyrq4iC867CWCNN6BBEWU --execute DESCRIBE professionals;",
+  "rows": [
+    {
+      "Field": "id",
+      "Type": "int(11)",
+      "Null": "NO",
+      "Key": "PRI",
+      "Default": "NULL",
+      "Extra": "auto_increment"
+    },
+    {
+      "Field": "uid",
+      "Type": "varchar(64)",
+      "Null": "NO",
+      "Key": "UNI",
+      "Default": "NULL",
+      "Extra": ""
+    },
+    {
+      "Field": "slug",
+      "Type": "varchar(255)",
+      "Null": "NO",
+      "Key": "UNI",
+      "Default": "",
+      "Extra": ""
+    },
+    {
+      "Field": "displayName",
+      "Type": "varchar(255)",
+      "Null": "NO",
+      "Key": "",
+      "Default": "NULL",
+      "Extra": ""
+    },
+    {
+      "Field": "category",
+      "Type": "varchar(100)",
+      "Null": "NO",
+      "Key": "",
+      "Default": "NULL",
+      "Extra": ""
+    },
+    {
+      "Field": "city",
+      "Type": "varchar(100)",
+      "Null": "NO",
+      "Key": "",
+      "Default": "NULL",
+      "Extra": ""
+    },
+    {
+      "Field": "phone",
+      "Type": "varchar(20)",
+      "Null": "YES",
+      "Key": "",
+      "Default": "NULL",
+      "Extra": ""
+    },
+    {
+      "Field": "whatsapp",
+      "Type": "varchar(20)",
+      "Null": "YES",
+      "Key": "",
+      "Default": "NULL",
+      "Extra": ""
+    },
+    {
+      "Field": "email",
+      "Type": "varchar(320)",
+      "Null": "YES",
+      "Key": "",
+      "Default": "NULL",
+      "Extra": ""
+    },
+    {
+      "Field": "bio",
+      "Type": "text",
+      "Null": "YES",
+      "Key": "",
+      "Default": "NULL",
+      "Extra": ""
+    },
+    {
+      "Field": "photoUrl",
+      "Type": "text",
+      "Null": "YES",
+      "Key": "",
+      "Default": "NULL",
+      "Extra": ""
+    },
+    {
+      "Field": "instagramVideoUrl",
+      "Type": "text",
+      "Null": "YES",
+      "Key": "",
+      "Default": "NULL",
+      "Extra": ""
+    },
+    {
+      "Field": "instagramHandle",
+      "Type": "varchar(100)",
+      "Null": "YES",
+      "Key": "",
+      "Default": "NULL",
+      "Extra": ""
+    },
+    {
+      "Field": "stars",
+      "Type": "int(11)",
+      "Null": "NO",
+      "Key": "",
+      "Default": "0",
+      "Extra": ""
+    },
+    {
+      "Field": "reviewCount",
+      "Type": "int(11)",
+      "Null": "NO",
+      "Key": "",
+      "Default": "0",
+      "Extra": ""
+    },
+    {
+      "Field": "badge",
+      "Type": "enum('none','verified','trusted')",
+      "Null": "NO",
+      "Key": "",
+      "Default": "none",
+      "Extra": ""
+    },
+    {
+      "Field": "planType",
+      "Type": "enum('base','destaque')",
+      "Null": "NO",
+      "Key": "",
+      "Default": "base",
+      "Extra": ""
+    },
+    {
+      "Field": "isActive",
+      "Type": "tinyint(1)",
+      "Null": "NO",
+      "Key": "",
+      "Default": "1",
+      "Extra": ""
+    },
+    {
+      "Field": "createdAt",
+      "Type": "timestamp",
+      "Null": "NO",
+      "Key": "",
+      "Default": "CURRENT_TIMESTAMP",
+      "Extra": ""
+    },
+    {
+      "Field": "updatedAt",
+      "Type": "timestamp",
+      "Null": "NO",
+      "Key": "",
+      "Default": "CURRENT_TIMESTAMP",
+      "Extra": "DEFAULT_GENERATED on update CURRENT_TIMESTAMP"
+    },
+    {
+      "Field": "trialEndsAt",
+      "Type": "timestamp",
+      "Null": "YES",
+      "Key": "",
+      "Default": "NULL",
+      "Extra": ""
+    },
+    {
+      "Field": "subscriptionEndsAt",
+      "Type": "timestamp",
+      "Null": "YES",
+      "Key": "",
+      "Default": "NULL",
+      "Extra": ""
+    },
+    {
+      "Field": "galleryPhotos",
+      "Type": "text",
+      "Null": "YES",
+      "Key": "",
+      "Default": "NULL",
+      "Extra": ""
+    },
+    {
+      "Field": "audioUrl",
+      "Type": "text",
+      "Null": "YES",
+      "Key": "",
+      "Default": "NULL",
+      "Extra": ""
+    },
+    {
+      "Field": "verificationStatus",
+      "Type": "enum('pending','approved','rejected')",
+      "Null": "YES",
+      "Key": "",
+      "Default": "pending",
+      "Extra": ""
+    },
+    {
+      "Field": "documentPhotoUrl",
+      "Type": "text",
+      "Null": "YES",
+      "Key": "",
+      "Default": "NULL",
+      "Extra": ""
+    },
+    {
+      "Field": "selfiePhotoUrl",
+      "Type": "text",
+      "Null": "YES",
+      "Key": "",
+      "Default": "NULL",
+      "Extra": ""
+    },
+    {
+      "Field": "aiVerificationResult",
+      "Type": "text",
+      "Null": "YES",
+      "Key": "",
+      "Default": "NULL",
+      "Extra": ""
+    },
+    {
+      "Field": "latitude",
+      "Type": "decimal(10,8)",
+      "Null": "YES",
+      "Key": "",
+      "Default": "NULL",
+      "Extra": ""
+    },
+    {
+      "Field": "longitude",
+      "Type": "decimal(11,8)",
+      "Null": "YES",
+      "Key": "",
+      "Default": "NULL",
+      "Extra": ""
+    },
+    {
+      "Field": "points",
+      "Type": "int(11)",
+      "Null": "NO",
+      "Key": "",
+      "Default": "0",
+      "Extra": ""
+    },
+    {
+      "Field": "responseTime",
+      "Type": "int(11)",
+      "Null": "YES",
+      "Key": "",
+      "Default": "NULL",
+      "Extra": ""
+    },
+    {
+      "Field": "beforeAfterPhotos",
+      "Type": "text",
+      "Null": "YES",
+      "Key": "",
+      "Default": "NULL",
+      "Extra": ""
+    }
+  ],
+  "messages": [],
+  "stdout": "Field\tType\tNull\tKey\tDefault\tExtra\nid\tint(11)\tNO\tPRI\tNULL\tauto_increment\nuid\tvarchar(64)\tNO\tUNI\tNULL\t\nslug\tvarchar(255)\tNO\tUNI\t\t\ndisplayName\tvarchar(255)\tNO\t\tNULL\t\ncategory\tvarchar(100)\tNO\t\tNULL\t\ncity\tvarchar(100)\tNO\t\tNULL\t\nphone\tvarchar(20)\tYES\t\tNULL\t\nwhatsapp\tvarchar(20)\tYES\t\tNULL\t\nemail\tvarchar(320)\tYES\t\tNULL\t\nbio\ttext\tYES\t\tNULL\t\nphotoUrl\ttext\tYES\t\tNULL\t\ninstagramVideoUrl\ttext\tYES\t\tNULL\t\ninstagramHandle\tvarchar(100)\tYES\t\tNULL\t\nstars\tint(11)\tNO\t\t0\t\nreviewCount\tint(11)\tNO\t\t0\t\nbadge\tenum('none','verified','trusted')\tNO\t\tnone\t\nplanType\tenum('base','destaque')\tNO\t\tbase\t\nisActive\ttinyint(1)\tNO\t\t1\t\ncreatedAt\ttimestamp\tNO\t\tCURRENT_TIMESTAMP\t\nupdatedAt\ttimestamp\tNO\t\tCURRENT_TIMESTAMP\tDEFAULT_GENERATED on update CURRENT_TIMESTAMP\ntrialEndsAt\ttimestamp\tYES\t\tNULL\t\nsubscriptionEndsAt\ttimestamp\tYES\t\tNULL\t\ngalleryPhotos\ttext\tYES\t\tNULL\t\naudioUrl\ttext\tYES\t\tNULL\t\nverificationStatus\tenum('pending','approved','rejected')\tYES\t\tpending\t\ndocumentPhotoUrl\ttext\tYES\t\tNULL\t\nselfiePhotoUrl\ttext\tYES\t\tNULL\t\naiVerificationResult\ttext\tYES\t\tNULL\t\nlatitude\tdecimal(10,8)\tYES\t\tNULL\t\nlongitude\tdecimal(11,8)\tYES\t\tNULL\t\npoints\tint(11)\tNO\t\t0\t\nresponseTime\tint(11)\tYES\t\tNULL\t\nbeforeAfterPhotos\ttext\tYES\t\tNULL\t\n",
+  "stderr": "",
+  "execution_time_ms": 53
+}

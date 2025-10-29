@@ -1,0 +1,1 @@
+ALTER TABLE `reviews` ADD `weight` int DEFAULT 1 NOT NULL;

@@ -1,0 +1,1 @@
+ALTER TABLE `professionals` ADD `audioUrl` text;

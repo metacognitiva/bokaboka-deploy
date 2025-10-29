@@ -1,0 +1,8 @@
+{
+  "query": "INSERT INTO categories (name) VALUES \n('Vendedor de Roupas'),\n('Vendedor de Calçados'),\n('Médico Psiquiatra'),\n('Médico Traumatologista'),\n('Médico Ortopedista'),\n('Médico Clínico Geral'),\n('Mecânico'),\n('Cabeleireira'),\n('Manicure'),\n('Massagista'),\n('Assistente Social'),\n('Contador')\nON CONFLICT (name) DO NOTHING;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3WA8gswNK9kepfn.6d9c26cfb25d --database ZWyrq4iC867CWCNN6BBEWU --execute INSERT INTO categories (name) VALUES \n('Vendedor de Roupas'),\n('Vendedor de Calçados'),\n('Médico Psiquiatra'),\n('Médico Traumatologista'),\n('Médico Ortopedista'),\n('Médico Clínico Geral'),\n('Mecânico'),\n('Cabeleireira'),\n('Manicure'),\n('Massagista'),\n('Assistente Social'),\n('Contador')\nON CONFLICT (name) DO NOTHING;",
+  "returncode": 1,
+  "logs": [
+    "ERROR 1064 (42000) at line 1: You have an error in your SQL syntax; check the manual that corresponds to your TiDB version for the right syntax to use line 14 column 12 near \"CONFLICT (name) DO NOTHING\""
+  ]
+}

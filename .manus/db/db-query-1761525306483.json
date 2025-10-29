@@ -1,0 +1,24 @@
+{
+  "query": "SELECT uid, displayName, category, city, photoUrl FROM professionals WHERE displayName LIKE '%Maria Eduarda%';",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3WA8gswNK9kepfn.6d9c26cfb25d --database ZWyrq4iC867CWCNN6BBEWU --execute SELECT uid, displayName, category, city, photoUrl FROM professionals WHERE displayName LIKE '%Maria Eduarda%';",
+  "rows": [
+    {
+      "uid": "d4l4iplt",
+      "displayName": "Maria Eduarda de Araújo Nóbrega",
+      "category": "Psicólogo",
+      "city": "Natal - RN",
+      "photoUrl": "https://forge.manus.ai/v1/storage/download/SVMpEWJsHb3aRDdnzbuC2U/uploads/876ee6c9-dbd2-4cc4-815b-3e55188c671b.jpg"
+    },
+    {
+      "uid": "gbyyvvq3",
+      "displayName": "Maria Eduarda de Araújo Nóbrega",
+      "category": "Psicólogo",
+      "city": "Natal - RN",
+      "photoUrl": "https://forge.manus.ai/v1/storage/download/V9DzkhANkf2C6XUAq4Sm6a/uploads/9dc4c795-8980-409d-9b2d-2c76501dfd4d.jpg"
+    }
+  ],
+  "messages": [],
+  "stdout": "uid\tdisplayName\tcategory\tcity\tphotoUrl\nd4l4iplt\tMaria Eduarda de Araújo Nóbrega\tPsicólogo\tNatal - RN\thttps://forge.manus.ai/v1/storage/download/SVMpEWJsHb3aRDdnzbuC2U/uploads/876ee6c9-dbd2-4cc4-815b-3e55188c671b.jpg\ngbyyvvq3\tMaria Eduarda de Araújo Nóbrega\tPsicólogo\tNatal - RN\thttps://forge.manus.ai/v1/storage/download/V9DzkhANkf2C6XUAq4Sm6a/uploads/9dc4c795-8980-409d-9b2d-2c76501dfd4d.jpg\n",
+  "stderr": "",
+  "execution_time_ms": 49
+}

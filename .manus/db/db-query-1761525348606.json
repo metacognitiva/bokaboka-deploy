@@ -1,0 +1,24 @@
+{
+  "query": "SELECT uid, displayName, category, photoUrl, galleryPhotos FROM professionals WHERE displayName LIKE '%Maria Eduarda%' AND category LIKE '%Psic%';",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3WA8gswNK9kepfn.6d9c26cfb25d --database ZWyrq4iC867CWCNN6BBEWU --execute SELECT uid, displayName, category, photoUrl, galleryPhotos FROM professionals WHERE displayName LIKE '%Maria Eduarda%' AND category LIKE '%Psic%';",
+  "rows": [
+    {
+      "uid": "d4l4iplt",
+      "displayName": "Maria Eduarda de Araújo Nóbrega",
+      "category": "Psicólogo",
+      "photoUrl": "https://forge.manus.ai/v1/storage/download/SVMpEWJsHb3aRDdnzbuC2U/uploads/876ee6c9-dbd2-4cc4-815b-3e55188c671b.jpg",
+      "galleryPhotos": "[\"https://forge.manus.ai/v1/storage/download/CgZG8ejQnyms3S8z9FmdnC/uploads/06a394e7-f6c2-4da5-9115-b58722efbfb5.jpg\",\"https://forge.manus.ai/v1/storage/download/R8nw8JjEQbXExDCauKaX7Q/uploads/7c55a08c-780d-406b-9cba-b5ecb79fba2c.jpg\",\"https://forge.manus.ai/v1/storage/download/X9XxCewJGyKAdGJgyaUHnp/uploads/550e845b-d28f-4571-8772-71ad364ac620.jpg\"]"
+    },
+    {
+      "uid": "gbyyvvq3",
+      "displayName": "Maria Eduarda de Araújo Nóbrega",
+      "category": "Psicólogo",
+      "photoUrl": "https://forge.manus.ai/v1/storage/download/V9DzkhANkf2C6XUAq4Sm6a/uploads/9dc4c795-8980-409d-9b2d-2c76501dfd4d.jpg",
+      "galleryPhotos": "[\"https://forge.manus.ai/v1/storage/download/R49dV9v565upKBACU73m2Z/uploads/5a86edc1-0ae1-4e3b-a398-e48005338a42.jpg\",\"https://forge.manus.ai/v1/storage/download/hh4WQfWUjZ5UDCW4HvBRct/uploads/b153ed64-f060-44d4-a9a5-d38c9c2bb556.jpg\",\"https://forge.manus.ai/v1/storage/download/f2meM5iUBJksNj9XywjTvj/uploads/a345d9a8-6680-4830-bfa6-1f7dee35d27e.jpg\"]"
+    }
+  ],
+  "messages": [],
+  "stdout": "uid\tdisplayName\tcategory\tphotoUrl\tgalleryPhotos\nd4l4iplt\tMaria Eduarda de Araújo Nóbrega\tPsicólogo\thttps://forge.manus.ai/v1/storage/download/SVMpEWJsHb3aRDdnzbuC2U/uploads/876ee6c9-dbd2-4cc4-815b-3e55188c671b.jpg\t[\"https://forge.manus.ai/v1/storage/download/CgZG8ejQnyms3S8z9FmdnC/uploads/06a394e7-f6c2-4da5-9115-b58722efbfb5.jpg\",\"https://forge.manus.ai/v1/storage/download/R8nw8JjEQbXExDCauKaX7Q/uploads/7c55a08c-780d-406b-9cba-b5ecb79fba2c.jpg\",\"https://forge.manus.ai/v1/storage/download/X9XxCewJGyKAdGJgyaUHnp/uploads/550e845b-d28f-4571-8772-71ad364ac620.jpg\"]\ngbyyvvq3\tMaria Eduarda de Araújo Nóbrega\tPsicólogo\thttps://forge.manus.ai/v1/storage/download/V9DzkhANkf2C6XUAq4Sm6a/uploads/9dc4c795-8980-409d-9b2d-2c76501dfd4d.jpg\t[\"https://forge.manus.ai/v1/storage/download/R49dV9v565upKBACU73m2Z/uploads/5a86edc1-0ae1-4e3b-a398-e48005338a42.jpg\",\"https://forge.manus.ai/v1/storage/download/hh4WQfWUjZ5UDCW4HvBRct/uploads/b153ed64-f060-44d4-a9a5-d38c9c2bb556.jpg\",\"https://forge.manus.ai/v1/storage/download/f2meM5iUBJksNj9XywjTvj/uploads/a345d9a8-6680-4830-bfa6-1f7dee35d27e.jpg\"]\n",
+  "stderr": "",
+  "execution_time_ms": 48
+}

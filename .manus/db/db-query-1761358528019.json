@@ -1,0 +1,16 @@
+{
+  "query": "SELECT id, uid, displayName, email FROM professionals WHERE uid = 'test-professional' LIMIT 1",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3WA8gswNK9kepfn.6d9c26cfb25d --database ZWyrq4iC867CWCNN6BBEWU --execute SELECT id, uid, displayName, email FROM professionals WHERE uid = 'test-professional' LIMIT 1",
+  "rows": [
+    {
+      "id": "120001",
+      "uid": "test-professional",
+      "displayName": "Profissional de Teste",
+      "email": "teste@bokaboka.com"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\tuid\tdisplayName\temail\n120001\ttest-professional\tProfissional de Teste\tteste@bokaboka.com\n",
+  "stderr": "",
+  "execution_time_ms": 68
+}

@@ -1,0 +1,60 @@
+{
+  "query": "SELECT id, displayName, verificationStatus FROM professionals WHERE verificationStatus = 'approved' ORDER BY id LIMIT 10;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3WA8gswNK9kepfn.6d9c26cfb25d --database ZWyrq4iC867CWCNN6BBEWU --execute SELECT id, displayName, verificationStatus FROM professionals WHERE verificationStatus = 'approved' ORDER BY id LIMIT 10;",
+  "rows": [
+    {
+      "id": "150001",
+      "displayName": "Diego Macedo Gonçalves ",
+      "verificationStatus": "approved"
+    },
+    {
+      "id": "180002",
+      "displayName": "Vinicius Marques Filgueira",
+      "verificationStatus": "approved"
+    },
+    {
+      "id": "210001",
+      "displayName": "Alynne Gonçalves ",
+      "verificationStatus": "approved"
+    },
+    {
+      "id": "270001",
+      "displayName": "Maria Eduarda de Araújo Nóbrega",
+      "verificationStatus": "approved"
+    },
+    {
+      "id": "300001",
+      "displayName": "José Duarte",
+      "verificationStatus": "approved"
+    },
+    {
+      "id": "330001",
+      "displayName": "Vitória ",
+      "verificationStatus": "approved"
+    },
+    {
+      "id": "360001",
+      "displayName": "Allison Araújo Barbosa ",
+      "verificationStatus": "approved"
+    },
+    {
+      "id": "390001",
+      "displayName": "Mundo dos acessorios",
+      "verificationStatus": "approved"
+    },
+    {
+      "id": "420001",
+      "displayName": "David Guilherme Macedo de Sousa",
+      "verificationStatus": "approved"
+    },
+    {
+      "id": "450001",
+      "displayName": "Sama Micaela dos Anjos Bezerra",
+      "verificationStatus": "approved"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\tdisplayName\tverificationStatus\n150001\tDiego Macedo Gonçalves \tapproved\n180002\tVinicius Marques Filgueira\tapproved\n210001\tAlynne Gonçalves \tapproved\n270001\tMaria Eduarda de Araújo Nóbrega\tapproved\n300001\tJosé Duarte\tapproved\n330001\tVitória \tapproved\n360001\tAllison Araújo Barbosa \tapproved\n390001\tMundo dos acessorios\tapproved\n420001\tDavid Guilherme Macedo de Sousa\tapproved\n450001\tSama Micaela dos Anjos Bezerra\tapproved\n",
+  "stderr": "",
+  "execution_time_ms": 59
+}

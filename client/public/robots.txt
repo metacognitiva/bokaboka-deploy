@@ -1,0 +1,18 @@
+# robots.txt for BokaBoka
+# Allow all search engines to crawl the site
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://bokaboka-zwyrq4ic.manus.space/sitemap.xml
+
+# Disallow admin and private pages
+Disallow: /admin
+Disallow: /analytics
+Disallow: /financial
+Disallow: /moderation
+
+# Crawl delay (optional, helps prevent server overload)
+Crawl-delay: 1
+

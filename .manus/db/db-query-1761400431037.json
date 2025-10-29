@@ -1,0 +1,22 @@
+{
+  "query": "SELECT id, name, email, role FROM users ORDER BY id DESC LIMIT 10;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3WA8gswNK9kepfn.6d9c26cfb25d --database ZWyrq4iC867CWCNN6BBEWU --execute SELECT id, name, email, role FROM users ORDER BY id DESC LIMIT 10;",
+  "rows": [
+    {
+      "id": "900017",
+      "name": "Allison Araújo",
+      "email": "allisoncoreografo2020@gmail.com",
+      "role": "user"
+    },
+    {
+      "id": "1",
+      "name": "Doutor Diego Gonçalves",
+      "email": "diego@metacognitiva.com.br",
+      "role": "admin"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\tname\temail\trole\n900017\tAllison Araújo\tallisoncoreografo2020@gmail.com\tuser\n1\tDoutor Diego Gonçalves\tdiego@metacognitiva.com.br\tadmin\n",
+  "stderr": "",
+  "execution_time_ms": 50
+}

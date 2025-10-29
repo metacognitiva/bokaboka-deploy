@@ -1,0 +1,9 @@
+{
+  "query": "UPDATE users SET role = 'admin' WHERE email = 'diego@metacognitiva.com.br';",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3WA8gswNK9kepfn.6d9c26cfb25d --database ZWyrq4iC867CWCNN6BBEWU --execute UPDATE users SET role = 'admin' WHERE email = 'diego@metacognitiva.com.br';",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 58
+}

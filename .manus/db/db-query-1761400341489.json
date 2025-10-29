@@ -1,0 +1,22 @@
+{
+  "query": "SELECT * FROM users WHERE role = 'admin' LIMIT 5;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3WA8gswNK9kepfn.6d9c26cfb25d --database ZWyrq4iC867CWCNN6BBEWU --execute SELECT * FROM users WHERE role = 'admin' LIMIT 5;",
+  "rows": [
+    {
+      "id": "1",
+      "openId": "TeGPdsMazb3yDdfPNGgnso",
+      "name": "Doutor Diego Gonçalves",
+      "email": "diego@metacognitiva.com.br",
+      "loginMethod": "google",
+      "role": "admin",
+      "createdAt": "2025-10-24 22:24:17",
+      "updatedAt": "2025-10-25 13:52:06",
+      "lastSignedIn": "2025-10-25 13:52:07",
+      "userType": "professional"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\topenId\tname\temail\tloginMethod\trole\tcreatedAt\tupdatedAt\tlastSignedIn\tuserType\n1\tTeGPdsMazb3yDdfPNGgnso\tDoutor Diego Gonçalves\tdiego@metacognitiva.com.br\tgoogle\tadmin\t2025-10-24 22:24:17\t2025-10-25 13:52:06\t2025-10-25 13:52:07\tprofessional\n",
+  "stderr": "",
+  "execution_time_ms": 200
+}

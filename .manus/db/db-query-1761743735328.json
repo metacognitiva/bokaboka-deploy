@@ -1,0 +1,15 @@
+{
+  "query": "SELECT id, displayName, galleryPhotos FROM professionals WHERE displayName LIKE '%Diego Macedo%';",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3WA8gswNK9kepfn.6d9c26cfb25d --database ZWyrq4iC867CWCNN6BBEWU --execute SELECT id, displayName, galleryPhotos FROM professionals WHERE displayName LIKE '%Diego Macedo%';",
+  "rows": [
+    {
+      "id": "240001",
+      "displayName": "Diego Macedo Gonçalves",
+      "galleryPhotos": "[\"https://forge.manus.ai/v1/storage/download/guaND2HSCVme6Xu7ajLGee/uploads/77f57df7-3613-4376-9d7e-26cf831f0d4b.jpg\",\"https://forge.manus.ai/v1/storage/download/CL55KhaKJZQDhWZBKNxA3X/uploads/df502a52-137a-43a9-bb5a-39a15989dfb2.jpg\",\"https://forge.manus.ai/v1/storage/download/kLUxQxFKPKyxztGNHXYarW/uploads/99ae5d0c-8dc9-469a-8838-f8f89c22c22c.jpg\"]"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\tdisplayName\tgalleryPhotos\n240001\tDiego Macedo Gonçalves\t[\"https://forge.manus.ai/v1/storage/download/guaND2HSCVme6Xu7ajLGee/uploads/77f57df7-3613-4376-9d7e-26cf831f0d4b.jpg\",\"https://forge.manus.ai/v1/storage/download/CL55KhaKJZQDhWZBKNxA3X/uploads/df502a52-137a-43a9-bb5a-39a15989dfb2.jpg\",\"https://forge.manus.ai/v1/storage/download/kLUxQxFKPKyxztGNHXYarW/uploads/99ae5d0c-8dc9-469a-8838-f8f89c22c22c.jpg\"]\n",
+  "stderr": "",
+  "execution_time_ms": 463
+}

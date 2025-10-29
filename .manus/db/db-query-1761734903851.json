@@ -1,0 +1,20 @@
+{
+  "query": "SELECT id, uid, displayName, category, city, planType, verificationStatus, isActive FROM professionals WHERE uid = 'TeGPdsMazb3yDdfPNGgnso';",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3WA8gswNK9kepfn.6d9c26cfb25d --database ZWyrq4iC867CWCNN6BBEWU --execute SELECT id, uid, displayName, category, city, planType, verificationStatus, isActive FROM professionals WHERE uid = 'TeGPdsMazb3yDdfPNGgnso';",
+  "rows": [
+    {
+      "id": "570001",
+      "uid": "TeGPdsMazb3yDdfPNGgnso",
+      "displayName": "Doutor Diego Gonçalves",
+      "category": "Psicólogo",
+      "city": "Natal - RN",
+      "planType": "destaque",
+      "verificationStatus": "approved",
+      "isActive": "1"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\tuid\tdisplayName\tcategory\tcity\tplanType\tverificationStatus\tisActive\n570001\tTeGPdsMazb3yDdfPNGgnso\tDoutor Diego Gonçalves\tPsicólogo\tNatal - RN\tdestaque\tapproved\t1\n",
+  "stderr": "",
+  "execution_time_ms": 54
+}

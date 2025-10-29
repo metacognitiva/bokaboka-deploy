@@ -1,0 +1,64 @@
+{
+  "query": "SHOW TABLES;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3WA8gswNK9kepfn.6d9c26cfb25d --database ZWyrq4iC867CWCNN6BBEWU --execute SHOW TABLES;",
+  "rows": [
+    {
+      "Tables_in_ZWyrq4iC867CWCNN6BBEWU": "__drizzle_migrations"
+    },
+    {
+      "Tables_in_ZWyrq4iC867CWCNN6BBEWU": "activities"
+    },
+    {
+      "Tables_in_ZWyrq4iC867CWCNN6BBEWU": "analytics"
+    },
+    {
+      "Tables_in_ZWyrq4iC867CWCNN6BBEWU": "badges"
+    },
+    {
+      "Tables_in_ZWyrq4iC867CWCNN6BBEWU": "categories"
+    },
+    {
+      "Tables_in_ZWyrq4iC867CWCNN6BBEWU": "follows"
+    },
+    {
+      "Tables_in_ZWyrq4iC867CWCNN6BBEWU": "leads"
+    },
+    {
+      "Tables_in_ZWyrq4iC867CWCNN6BBEWU": "moderation_actions"
+    },
+    {
+      "Tables_in_ZWyrq4iC867CWCNN6BBEWU": "page_views"
+    },
+    {
+      "Tables_in_ZWyrq4iC867CWCNN6BBEWU": "payments"
+    },
+    {
+      "Tables_in_ZWyrq4iC867CWCNN6BBEWU": "professionalBadges"
+    },
+    {
+      "Tables_in_ZWyrq4iC867CWCNN6BBEWU": "professionals"
+    },
+    {
+      "Tables_in_ZWyrq4iC867CWCNN6BBEWU": "referrals"
+    },
+    {
+      "Tables_in_ZWyrq4iC867CWCNN6BBEWU": "reports"
+    },
+    {
+      "Tables_in_ZWyrq4iC867CWCNN6BBEWU": "reviews"
+    },
+    {
+      "Tables_in_ZWyrq4iC867CWCNN6BBEWU": "stories"
+    },
+    {
+      "Tables_in_ZWyrq4iC867CWCNN6BBEWU": "storyViews"
+    },
+    {
+      "Tables_in_ZWyrq4iC867CWCNN6BBEWU": "users"
+    }
+  ],
+  "messages": [],
+  "stdout": "Tables_in_ZWyrq4iC867CWCNN6BBEWU\n__drizzle_migrations\nactivities\nanalytics\nbadges\ncategories\nfollows\nleads\nmoderation_actions\npage_views\npayments\nprofessionalBadges\nprofessionals\nreferrals\nreports\nreviews\nstories\nstoryViews\nusers\n",
+  "stderr": "",
+  "execution_time_ms": 48
+}

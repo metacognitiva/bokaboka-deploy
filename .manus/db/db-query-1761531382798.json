@@ -1,0 +1,430 @@
+{
+  "query": "SELECT name FROM categories ORDER BY name;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3WA8gswNK9kepfn.6d9c26cfb25d --database ZWyrq4iC867CWCNN6BBEWU --execute SELECT name FROM categories ORDER BY name;",
+  "rows": [
+    {
+      "name": "Acupunturista"
+    },
+    {
+      "name": "Adestrador"
+    },
+    {
+      "name": "Adestrador de Cães"
+    },
+    {
+      "name": "Advogado"
+    },
+    {
+      "name": "Advogado Cível"
+    },
+    {
+      "name": "Advogado Criminalista"
+    },
+    {
+      "name": "Advogado de Família"
+    },
+    {
+      "name": "Advogado Empresarial"
+    },
+    {
+      "name": "Advogado Previdenciário"
+    },
+    {
+      "name": "Advogado Trabalhista"
+    },
+    {
+      "name": "Advogado Tributário"
+    },
+    {
+      "name": "Alfaiate"
+    },
+    {
+      "name": "Animador de Festas"
+    },
+    {
+      "name": "Arquiteto"
+    },
+    {
+      "name": "Assistente Social"
+    },
+    {
+      "name": "Ator"
+    },
+    {
+      "name": "Avaliador de Imóveis"
+    },
+    {
+      "name": "Azulejista"
+    },
+    {
+      "name": "Babá"
+    },
+    {
+      "name": "Barbeiro"
+    },
+    {
+      "name": "Bombeiro Hidráulico"
+    },
+    {
+      "name": "Borracheiro"
+    },
+    {
+      "name": "Bugreiro"
+    },
+    {
+      "name": "Cabeleireira"
+    },
+    {
+      "name": "Cabeleireiro"
+    },
+    {
+      "name": "Cantor"
+    },
+    {
+      "name": "Carpinteiro"
+    },
+    {
+      "name": "Chaveiro"
+    },
+    {
+      "name": "Chef de Cozinha"
+    },
+    {
+      "name": "Cinegrafista"
+    },
+    {
+      "name": "Coach de Vida"
+    },
+    {
+      "name": "Coach Esportivo"
+    },
+    {
+      "name": "Confeiteiro"
+    },
+    {
+      "name": "Consultor Automotivo"
+    },
+    {
+      "name": "Consultor de Imagem"
+    },
+    {
+      "name": "Consultor Financeiro"
+    },
+    {
+      "name": "Contador"
+    },
+    {
+      "name": "Corretor de Imóveis"
+    },
+    {
+      "name": "Corretor de Seguros"
+    },
+    {
+      "name": "Costureira"
+    },
+    {
+      "name": "Cuidador de Idosos e Enfermos"
+    },
+    {
+      "name": "Cuidados de Automóveis"
+    },
+    {
+      "name": "Decorador"
+    },
+    {
+      "name": "Decorador de Interiores"
+    },
+    {
+      "name": "Dedetizador"
+    },
+    {
+      "name": "Dentista"
+    },
+    {
+      "name": "Depilador"
+    },
+    {
+      "name": "Desenvolvedor de Sites"
+    },
+    {
+      "name": "Desenvolvedor Web"
+    },
+    {
+      "name": "Designer de Sobrancelhas"
+    },
+    {
+      "name": "Designer Gráfico"
+    },
+    {
+      "name": "Despachante"
+    },
+    {
+      "name": "Detetive Particular"
+    },
+    {
+      "name": "Diarista"
+    },
+    {
+      "name": "DJ"
+    },
+    {
+      "name": "Dog Walker"
+    },
+    {
+      "name": "Editor de Vídeo"
+    },
+    {
+      "name": "Eletricista"
+    },
+    {
+      "name": "Eletricista Automotivo"
+    },
+    {
+      "name": "Encanador"
+    },
+    {
+      "name": "Engenheiro Civil"
+    },
+    {
+      "name": "Entregador"
+    },
+    {
+      "name": "Esteticista"
+    },
+    {
+      "name": "Fisioterapeuta"
+    },
+    {
+      "name": "Florista"
+    },
+    {
+      "name": "Fonoaudiólogo"
+    },
+    {
+      "name": "Fotógrafo"
+    },
+    {
+      "name": "Funileiro"
+    },
+    {
+      "name": "Gesseiro"
+    },
+    {
+      "name": "Guia Turístico"
+    },
+    {
+      "name": "Instalador de Ar Condicionado"
+    },
+    {
+      "name": "Instrutor de Artes Marciais"
+    },
+    {
+      "name": "Instrutor de Dança"
+    },
+    {
+      "name": "Instrutor de Música"
+    },
+    {
+      "name": "Instrutor de Natação"
+    },
+    {
+      "name": "Instrutor de Pilates"
+    },
+    {
+      "name": "Instrutor de Yoga"
+    },
+    {
+      "name": "Intérprete"
+    },
+    {
+      "name": "Jardineiro"
+    },
+    {
+      "name": "Lavador de Carros"
+    },
+    {
+      "name": "Limpeza de Piscina"
+    },
+    {
+      "name": "Limpeza Residencial"
+    },
+    {
+      "name": "Mágico"
+    },
+    {
+      "name": "Manicure"
+    },
+    {
+      "name": "Maquiador"
+    },
+    {
+      "name": "Marceneiro"
+    },
+    {
+      "name": "Marketing Digital"
+    },
+    {
+      "name": "Massagista"
+    },
+    {
+      "name": "Mecânico"
+    },
+    {
+      "name": "Médico Clínico Geral"
+    },
+    {
+      "name": "Médico Ortopedista"
+    },
+    {
+      "name": "Médico Psiquiatra"
+    },
+    {
+      "name": "Médico Traumatologista"
+    },
+    {
+      "name": "Modelo"
+    },
+    {
+      "name": "Motorista Particular"
+    },
+    {
+      "name": "Mudanças"
+    },
+    {
+      "name": "Músico"
+    },
+    {
+      "name": "Nutricionista"
+    },
+    {
+      "name": "Organizador de Eventos"
+    },
+    {
+      "name": "Padeiro"
+    },
+    {
+      "name": "Paisagista"
+    },
+    {
+      "name": "Palhaço"
+    },
+    {
+      "name": "Pedreiro"
+    },
+    {
+      "name": "Personal Organizer"
+    },
+    {
+      "name": "Personal Stylist"
+    },
+    {
+      "name": "Personal Trainer"
+    },
+    {
+      "name": "Pet Sitter"
+    },
+    {
+      "name": "Piercer"
+    },
+    {
+      "name": "Pintor"
+    },
+    {
+      "name": "Podólogo"
+    },
+    {
+      "name": "Polidor de Veículos"
+    },
+    {
+      "name": "Porteiro"
+    },
+    {
+      "name": "Professor Particular"
+    },
+    {
+      "name": "Psicólogo"
+    },
+    {
+      "name": "Quiropraxista"
+    },
+    {
+      "name": "Redator"
+    },
+    {
+      "name": "Revisor de Textos"
+    },
+    {
+      "name": "Sapateiro"
+    },
+    {
+      "name": "Segurança Particular"
+    },
+    {
+      "name": "Serralheiro"
+    },
+    {
+      "name": "Síndico Profissional"
+    },
+    {
+      "name": "Soldador"
+    },
+    {
+      "name": "Tapeceiro"
+    },
+    {
+      "name": "Tatuador"
+    },
+    {
+      "name": "Técnico de Celular"
+    },
+    {
+      "name": "Técnico de Enfermagem"
+    },
+    {
+      "name": "Técnico de Geladeira"
+    },
+    {
+      "name": "Técnico de Informática"
+    },
+    {
+      "name": "Técnico de Máquina de Lavar"
+    },
+    {
+      "name": "Técnico de TV"
+    },
+    {
+      "name": "Terapeuta Holístico"
+    },
+    {
+      "name": "Terapeuta Ocupacional"
+    },
+    {
+      "name": "Tosador de Animais"
+    },
+    {
+      "name": "Tradutor"
+    },
+    {
+      "name": "Vendedor de Calçados"
+    },
+    {
+      "name": "Vendedor de Roupas"
+    },
+    {
+      "name": "Veterinário"
+    },
+    {
+      "name": "Videomaker"
+    },
+    {
+      "name": "Vidraceiro"
+    },
+    {
+      "name": "Zelador"
+    }
+  ],
+  "messages": [],
+  "stdout": "name\nAcupunturista\nAdestrador\nAdestrador de Cães\nAdvogado\nAdvogado Cível\nAdvogado Criminalista\nAdvogado de Família\nAdvogado Empresarial\nAdvogado Previdenciário\nAdvogado Trabalhista\nAdvogado Tributário\nAlfaiate\nAnimador de Festas\nArquiteto\nAssistente Social\nAtor\nAvaliador de Imóveis\nAzulejista\nBabá\nBarbeiro\nBombeiro Hidráulico\nBorracheiro\nBugreiro\nCabeleireira\nCabeleireiro\nCantor\nCarpinteiro\nChaveiro\nChef de Cozinha\nCinegrafista\nCoach de Vida\nCoach Esportivo\nConfeiteiro\nConsultor Automotivo\nConsultor de Imagem\nConsultor Financeiro\nContador\nCorretor de Imóveis\nCorretor de Seguros\nCostureira\nCuidador de Idosos e Enfermos\nCuidados de Automóveis\nDecorador\nDecorador de Interiores\nDedetizador\nDentista\nDepilador\nDesenvolvedor de Sites\nDesenvolvedor Web\nDesigner de Sobrancelhas\nDesigner Gráfico\nDespachante\nDetetive Particular\nDiarista\nDJ\nDog Walker\nEditor de Vídeo\nEletricista\nEletricista Automotivo\nEncanador\nEngenheiro Civil\nEntregador\nEsteticista\nFisioterapeuta\nFlorista\nFonoaudiólogo\nFotógrafo\nFunileiro\nGesseiro\nGuia Turístico\nInstalador de Ar Condicionado\nInstrutor de Artes Marciais\nInstrutor de Dança\nInstrutor de Música\nInstrutor de Natação\nInstrutor de Pilates\nInstrutor de Yoga\nIntérprete\nJardineiro\nLavador de Carros\nLimpeza de Piscina\nLimpeza Residencial\nMágico\nManicure\nMaquiador\nMarceneiro\nMarketing Digital\nMassagista\nMecânico\nMédico Clínico Geral\nMédico Ortopedista\nMédico Psiquiatra\nMédico Traumatologista\nModelo\nMotorista Particular\nMudanças\nMúsico\nNutricionista\nOrganizador de Eventos\nPadeiro\nPaisagista\nPalhaço\nPedreiro\nPersonal Organizer\nPersonal Stylist\nPersonal Trainer\nPet Sitter\nPiercer\nPintor\nPodólogo\nPolidor de Veículos\nPorteiro\nProfessor Particular\nPsicólogo\nQuiropraxista\nRedator\nRevisor de Textos\nSapateiro\nSegurança Particular\nSerralheiro\nSíndico Profissional\nSoldador\nTapeceiro\nTatuador\nTécnico de Celular\nTécnico de Enfermagem\nTécnico de Geladeira\nTécnico de Informática\nTécnico de Máquina de Lavar\nTécnico de TV\nTerapeuta Holístico\nTerapeuta Ocupacional\nTosador de Animais\nTradutor\nVendedor de Calçados\nVendedor de Roupas\nVeterinário\nVideomaker\nVidraceiro\nZelador\n",
+  "stderr": "",
+  "execution_time_ms": 49
+}

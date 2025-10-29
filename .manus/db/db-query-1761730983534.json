@@ -1,0 +1,22 @@
+{
+  "query": "SELECT id, uid, displayName, planType FROM professionals WHERE displayName LIKE '%Diego%' LIMIT 5;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3WA8gswNK9kepfn.6d9c26cfb25d --database ZWyrq4iC867CWCNN6BBEWU --execute SELECT id, uid, displayName, planType FROM professionals WHERE displayName LIKE '%Diego%' LIMIT 5;",
+  "rows": [
+    {
+      "id": "150001",
+      "uid": "robwqds4",
+      "displayName": "Diego Macedo Gonçalves ",
+      "planType": "destaque"
+    },
+    {
+      "id": "240001",
+      "uid": "1xd2vnsk",
+      "displayName": "Diego Macedo Gonçalves",
+      "planType": "base"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\tuid\tdisplayName\tplanType\n150001\trobwqds4\tDiego Macedo Gonçalves \tdestaque\n240001\t1xd2vnsk\tDiego Macedo Gonçalves\tbase\n",
+  "stderr": "",
+  "execution_time_ms": 314
+}

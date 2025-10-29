@@ -1,0 +1,9 @@
+{
+  "query": "INSERT INTO professionals (\n  uid, \n  displayName, \n  category, \n  city, \n  phone, \n  whatsapp, \n  bio, \n  photoUrl,\n  stars, \n  reviewCount, \n  badge, \n  planType, \n  verificationStatus,\n  isActive,\n  subscriptionEndsAt\n) VALUES (\n  'TeGPdsMazb3yDdfPNGgnso',\n  'Doutor Diego Gonçalves',\n  'Psicólogo',\n  'Natal - RN',\n  '84999999999',\n  '84999999999',\n  'Psicólogo clínico especializado em terapia cognitivo-comportamental.',\n  'https://i.pravatar.cc/400?img=12',\n  5.0,\n  0,\n  'verified',\n  'destaque',\n  'approved',\n  1,\n  DATE_ADD(NOW(), INTERVAL 30 DAY)\n);",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3WA8gswNK9kepfn.6d9c26cfb25d --database ZWyrq4iC867CWCNN6BBEWU --execute INSERT INTO professionals (\n  uid, \n  displayName, \n  category, \n  city, \n  phone, \n  whatsapp, \n  bio, \n  photoUrl,\n  stars, \n  reviewCount, \n  badge, \n  planType, \n  verificationStatus,\n  isActive,\n  subscriptionEndsAt\n) VALUES (\n  'TeGPdsMazb3yDdfPNGgnso',\n  'Doutor Diego Gonçalves',\n  'Psicólogo',\n  'Natal - RN',\n  '84999999999',\n  '84999999999',\n  'Psicólogo clínico especializado em terapia cognitivo-comportamental.',\n  'https://i.pravatar.cc/400?img=12',\n  5.0,\n  0,\n  'verified',\n  'destaque',\n  'approved',\n  1,\n  DATE_ADD(NOW(), INTERVAL 30 DAY)\n);",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 61
+}

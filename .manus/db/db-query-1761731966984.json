@@ -1,0 +1,20 @@
+{
+  "query": "SELECT uid, displayName, email FROM professionals WHERE displayName LIKE '%Doutor Diego%' OR email LIKE '%diego%' LIMIT 5;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3WA8gswNK9kepfn.6d9c26cfb25d --database ZWyrq4iC867CWCNN6BBEWU --execute SELECT uid, displayName, email FROM professionals WHERE displayName LIKE '%Doutor Diego%' OR email LIKE '%diego%' LIMIT 5;",
+  "rows": [
+    {
+      "uid": "robwqds4",
+      "displayName": "Diego Macedo Gonçalves ",
+      "email": "diego@metacognitiva.com.br"
+    },
+    {
+      "uid": "1xd2vnsk",
+      "displayName": "Diego Macedo Gonçalves",
+      "email": "diego@metacognitiva.com"
+    }
+  ],
+  "messages": [],
+  "stdout": "uid\tdisplayName\temail\nrobwqds4\tDiego Macedo Gonçalves \tdiego@metacognitiva.com.br\n1xd2vnsk\tDiego Macedo Gonçalves\tdiego@metacognitiva.com\n",
+  "stderr": "",
+  "execution_time_ms": 65
+}

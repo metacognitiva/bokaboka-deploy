@@ -1,0 +1,15 @@
+{
+  "query": "SELECT uid, displayName, photoUrl FROM professionals WHERE displayName LIKE '%Sama%' LIMIT 5;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3WA8gswNK9kepfn.6d9c26cfb25d --database ZWyrq4iC867CWCNN6BBEWU --execute SELECT uid, displayName, photoUrl FROM professionals WHERE displayName LIKE '%Sama%' LIMIT 5;",
+  "rows": [
+    {
+      "uid": "5strr43j",
+      "displayName": "Sama Micaela dos Anjos Bezerra",
+      "photoUrl": "https://forge.manus.ai/v1/storage/download/fVYSy3V6HvcquaJ3zm7rSu/uploads/091569f6-f806-4a02-8ce3-43a3e5ac33dc.jpg"
+    }
+  ],
+  "messages": [],
+  "stdout": "uid\tdisplayName\tphotoUrl\n5strr43j\tSama Micaela dos Anjos Bezerra\thttps://forge.manus.ai/v1/storage/download/fVYSy3V6HvcquaJ3zm7rSu/uploads/091569f6-f806-4a02-8ce3-43a3e5ac33dc.jpg\n",
+  "stderr": "",
+  "execution_time_ms": 57
+}

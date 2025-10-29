@@ -1,0 +1,9 @@
+{
+  "query": "INSERT INTO stories (professionalId, mediaUrl, mediaType, caption, viewCount, expiresAt, createdAt) \nVALUES (\n  (SELECT id FROM professionals WHERE displayName LIKE '%Diego%' AND planType = 'destaque' LIMIT 1),\n  'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800',\n  'image',\n  '🦷 Transformação de sorriso! Antes e depois de um clareamento dental. #Odontologia #SorrisoPerfeito',\n  0,\n  DATE_ADD(NOW(), INTERVAL 24 HOUR),\n  NOW()\n);",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3WA8gswNK9kepfn.6d9c26cfb25d --database ZWyrq4iC867CWCNN6BBEWU --execute INSERT INTO stories (professionalId, mediaUrl, mediaType, caption, viewCount, expiresAt, createdAt) \nVALUES (\n  (SELECT id FROM professionals WHERE displayName LIKE '%Diego%' AND planType = 'destaque' LIMIT 1),\n  'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800',\n  'image',\n  '🦷 Transformação de sorriso! Antes e depois de um clareamento dental. #Odontologia #SorrisoPerfeito',\n  0,\n  DATE_ADD(NOW(), INTERVAL 24 HOUR),\n  NOW()\n);",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 60
+}

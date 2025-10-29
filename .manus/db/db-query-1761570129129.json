@@ -1,0 +1,16 @@
+{
+  "query": "SELECT uid, displayName, photoUrl, galleryPhotos FROM professionals WHERE displayName LIKE '%Vitória%' OR displayName LIKE '%Vitoria%';",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3WA8gswNK9kepfn.6d9c26cfb25d --database ZWyrq4iC867CWCNN6BBEWU --execute SELECT uid, displayName, photoUrl, galleryPhotos FROM professionals WHERE displayName LIKE '%Vitória%' OR displayName LIKE '%Vitoria%';",
+  "rows": [
+    {
+      "uid": "dv73ufyw",
+      "displayName": "Vitória ",
+      "photoUrl": "https://forge.manus.ai/v1/storage/download/4g7gnYgAX6UyE5eYnk7ykt/uploads/621244b2-e860-4ad0-a446-c8163d2db9b7.jpg",
+      "galleryPhotos": "[\"https://forge.manus.ai/v1/storage/download/dC56eQZZ4F9gFykAfgMJGn/uploads/c6657f8d-6ff5-47a9-a04a-573c624e1443.jpg\",\"https://forge.manus.ai/v1/storage/download/AAAdwQT224THwEoBkUFU2V/uploads/0f2eb23d-92a3-4d2b-999c-7e9772270cc9.jpg\",\"https://forge.manus.ai/v1/storage/download/Kq6GUufGH4C4D43MTSJ6Hc/uploads/70b46053-b022-40e3-b933-ff95419f4e6e.jpg\",\"https://forge.manus.ai/v1/storage/download/LK9UriNbFxYiP4BDPBkAUd/uploads/9367de1e-16c7-4d63-bb92-184ec00c359e.jpg\"]"
+    }
+  ],
+  "messages": [],
+  "stdout": "uid\tdisplayName\tphotoUrl\tgalleryPhotos\ndv73ufyw\tVitória \thttps://forge.manus.ai/v1/storage/download/4g7gnYgAX6UyE5eYnk7ykt/uploads/621244b2-e860-4ad0-a446-c8163d2db9b7.jpg\t[\"https://forge.manus.ai/v1/storage/download/dC56eQZZ4F9gFykAfgMJGn/uploads/c6657f8d-6ff5-47a9-a04a-573c624e1443.jpg\",\"https://forge.manus.ai/v1/storage/download/AAAdwQT224THwEoBkUFU2V/uploads/0f2eb23d-92a3-4d2b-999c-7e9772270cc9.jpg\",\"https://forge.manus.ai/v1/storage/download/Kq6GUufGH4C4D43MTSJ6Hc/uploads/70b46053-b022-40e3-b933-ff95419f4e6e.jpg\",\"https://forge.manus.ai/v1/storage/download/LK9UriNbFxYiP4BDPBkAUd/uploads/9367de1e-16c7-4d63-bb92-184ec00c359e.jpg\"]\n",
+  "stderr": "",
+  "execution_time_ms": 65
+}

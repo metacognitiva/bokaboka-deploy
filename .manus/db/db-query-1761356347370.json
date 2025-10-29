@@ -1,0 +1,13 @@
+{
+  "query": "SELECT COUNT(*) as total FROM professionals;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3WA8gswNK9kepfn.6d9c26cfb25d --database ZWyrq4iC867CWCNN6BBEWU --execute SELECT COUNT(*) as total FROM professionals;",
+  "rows": [
+    {
+      "total": "2656"
+    }
+  ],
+  "messages": [],
+  "stdout": "total\n2656\n",
+  "stderr": "",
+  "execution_time_ms": 87
+}
