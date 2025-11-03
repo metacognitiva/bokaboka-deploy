@@ -17,19 +17,12 @@ RUN pnpm install --frozen-lockfile
 # Copiar código fonte
 COPY . .
 
-# Declarar ARGs para variáveis de ambiente do Vite
-ARG VITE_APP_ID
-ARG VITE_APP_TITLE
-ARG VITE_APP_LOGO
-ARG VITE_OAUTH_PORTAL_URL
-ARG OAUTH_SERVER_URL
-
-# Exportar como ENV para que o Vite possa acessá-las durante o build
-ENV VITE_APP_ID=$VITE_APP_ID
-ENV VITE_APP_TITLE=$VITE_APP_TITLE
-ENV VITE_APP_LOGO=$VITE_APP_LOGO
-ENV VITE_OAUTH_PORTAL_URL=$VITE_OAUTH_PORTAL_URL
-ENV OAUTH_SERVER_URL=$OAUTH_SERVER_URL
+# Definir variáveis de ambiente do Vite com valores fixos
+ENV VITE_APP_ID=bokaboka
+ENV VITE_APP_TITLE=BokaBoka
+ENV VITE_APP_LOGO=https://placehold.co/40x40/3b82f6/ffffff?text=B
+ENV VITE_OAUTH_PORTAL_URL=https://vida.butterfly-effect.dev
+ENV OAUTH_SERVER_URL=https://vidabiz.butterfly-effect.dev
 
 # Build do projeto
 RUN pnpm build
