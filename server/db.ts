@@ -1,15 +1,18 @@
 import { eq, like, and, or, desc, sql } from "drizzle-orm";
-import { drizzle } from "drizzle-orm/mysql2";
-import { InsertUser, users, professionals, categories, reviews, leads, InsertProfessional, InsertCategory, InsertReview, InsertLead } from "../drizzle/schema";
+import { drizzle } from "drizzle-orm/postgres-js";
+import postgres from "postgres";
+import { InsertUser, users, professionals, categories, reviews, leads, InsertProfessional, InsertCategory, InsertReview, InsertLead } from "../drizzle/schema-pg";
 import { ENV } from './_core/env';
 
 let _db: ReturnType<typeof drizzle> | null = null;
+let _sql: ReturnType<typeof postgres> | null = null;
 
 // Lazily create the drizzle instance so local tooling can run without a DB.
 export async function getDb() {
   if (!_db && process.env.DATABASE_URL) {
     try {
-      _db = drizzle(process.env.DATABASE_URL);
+      _sql = postgres(process.env.DATABASE_URL);
+      _db = drizzle(_sql);
     } catch (error) {
       console.warn("[Database] Failed to connect:", error);
       _db = null;
@@ -68,7 +71,9 @@ export async function upsertUser(user: InsertUser): Promise<void> {
       updateSet.lastSignedIn = new Date();
     }
 
-    await db.insert(users).values(values).onDuplicateKeyUpdate({
+    // PostgreSQL upsert using onConflictDoUpdate
+    await db.insert(users).values(values).onConflictDoUpdate({
+      target: users.openId,
       set: updateSet,
     });
   } catch (error) {
@@ -173,9 +178,9 @@ export async function createProfessional(data: InsertProfessional) {
   const result = await db.insert(professionals).values({
     ...data,
     trialEndsAt,
-  });
+  }).returning();
 
-  return result;
+  return result[0];
 }
 
 export async function updateProfessional(id: number, data: Partial<InsertProfessional>) {
@@ -203,8 +208,8 @@ export async function createCategory(data: InsertCategory) {
   const db = await getDb();
   if (!db) throw new Error("Database not available");
 
-  const result = await db.insert(categories).values(data);
-  return result;
+  const result = await db.insert(categories).values(data).returning();
+  return result[0];
 }
 
 // Review queries
@@ -225,7 +230,7 @@ export async function createReview(data: InsertReview) {
   const db = await getDb();
   if (!db) throw new Error("Database not available");
 
-  const result = await db.insert(reviews).values(data);
+  const result = await db.insert(reviews).values(data).returning();
 
   // Update professional stats with weighted average
   const prof = await getProfessionalById(data.professionalId);
@@ -246,7 +251,7 @@ export async function createReview(data: InsertReview) {
     });
   }
 
-  return result;
+  return result[0];
 }
 
 // Lead queries
@@ -254,8 +259,8 @@ export async function createLead(data: InsertLead) {
   const db = await getDb();
   if (!db) throw new Error("Database not available");
 
-  const result = await db.insert(leads).values(data);
-  return result;
+  const result = await db.insert(leads).values(data).returning();
+  return result[0];
 }
 
 export async function getLeadsByProfessional(professionalId: number) {
@@ -287,4 +292,3 @@ export function isProfessionalActive(professional: typeof professionals.$inferSe
   
   return false;
 }
-
