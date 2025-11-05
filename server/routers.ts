@@ -253,7 +253,7 @@ export const appRouter = router({
         }
         const db = await getDb();
         if (!db) return [];
-        const { professionals } = await import('../drizzle/schema');
+        const { professionals } = await import('../drizzle/schema-pg');
         const { eq } = await import('drizzle-orm');
         return await db.select().from(professionals).where(eq(professionals.verificationStatus, 'pending'));
       }),
@@ -324,7 +324,7 @@ export const appRouter = router({
         }
         const db = await getDb();
         if (!db) throw new Error('Database not available');
-        const { professionals } = await import('../drizzle/schema');
+        const { professionals } = await import('../drizzle/schema-pg');
         const { eq } = await import('drizzle-orm');
         await db.delete(professionals).where(eq(professionals.id, input.id));
         return { success: true };
@@ -335,7 +335,7 @@ export const appRouter = router({
       .query(async ({ ctx }) => {
         const db = await getDb();
         if (!db) throw new Error('Database not available');
-        const { professionals } = await import('../drizzle/schema');
+        const { professionals } = await import('../drizzle/schema-pg');
         const { eq } = await import('drizzle-orm');
         
         const result = await db
@@ -368,7 +368,7 @@ export const appRouter = router({
       .mutation(async ({ input, ctx }) => {
         const db = await getDb();
         if (!db) throw new Error('Database not available');
-        const { professionals } = await import('../drizzle/schema');
+        const { professionals } = await import('../drizzle/schema-pg');
         const { eq } = await import('drizzle-orm');
         
         // Remover campos undefined
@@ -888,7 +888,7 @@ export const appRouter = router({
       }
       const db = await getDb();
       if (!db) return [];
-      const { payments } = await import('../drizzle/schema');
+      const { payments } = await import('../drizzle/schema-pg');
       return await db.select().from(payments);
     }),
 

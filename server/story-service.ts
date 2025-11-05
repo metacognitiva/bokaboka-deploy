@@ -70,7 +70,7 @@ export async function getAllActiveStories(): Promise<(Story & { professionalName
   const db = await getDb();
   if (!db) throw new Error('Database not available');
   
-  const { professionals } = await import('../drizzle/schema');
+  const { professionals } = await import('../drizzle/schema-pg');
   
   const now = new Date();
   
