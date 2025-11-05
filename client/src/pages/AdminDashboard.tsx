@@ -409,6 +409,13 @@ export default function AdminDashboard() {
 
           {/* Profissionais */}
           <TabsContent value="professionals" className="space-y-6">
+            <div className="flex justify-between items-center mb-4">
+              <h2 className="text-2xl font-bold">Profissionais Cadastrados</h2>
+              <Button onClick={() => setEditingProfessional({ isNew: true })} size="lg">
+                <Pencil className="w-4 h-4 mr-2" />
+                Inserir Profissional
+              </Button>
+            </div>
             <div className="grid gap-4">
               {allProfessionals?.slice(0, 20).map((professional) => (
                 <Card key={professional.id} className="bg-gradient-to-r from-white to-blue-50 border-blue-200 hover:shadow-lg transition-all duration-300">
