@@ -9,6 +9,9 @@ export const verificationStatusEnum = pgEnum("verificationStatus", ["pending", "
 export const mediaTypeEnum = pgEnum("mediaType", ["image", "video", "text"]);
 export const activityTypeEnum = pgEnum("activityType", ["new_professional", "new_review", "badge_earned", "milestone"]);
 export const typeEnum = pgEnum("type", ["services", "rating", "reviews", "referrals"]);
+export const statusEnum = pgEnum("status", ["pending", "contacted", "converted", "closed"]);
+export const paymentMethodEnum = pgEnum("paymentMethod", ["credit_card", "pix", "boleto"]);
+export const paymentStatusEnum = pgEnum("paymentStatus", ["pending", "completed", "failed", "refunded"]);
 
 /**
  * Core user table
@@ -197,3 +200,75 @@ export const analytics = pgTable("analytics", {
 
 export type Analytics = typeof analytics.$inferSelect;
 export type InsertAnalytics = typeof analytics.$inferInsert;
+
+// Payment and Referral Tables
+
+export const referrals = pgTable("referrals", {
+  id: serial("id").primaryKey(),
+  referrerId: integer("referrerId").notNull(),
+  referredId: integer("referredId").notNull(),
+  referralCode: varchar("referralCode", { length: 20 }).notNull().unique(),
+  status: statusEnum("status").default("pending").notNull(),
+  discountAmount: integer("discountAmount").default(1000).notNull(),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+  completedAt: timestamp("completedAt"),
+});
+
+export type Referral = typeof referrals.$inferSelect;
+export type InsertReferral = typeof referrals.$inferInsert;
+
+export const promoCodes = pgTable("promoCodes", {
+  id: serial("id").primaryKey(),
+  code: varchar("code", { length: 50 }).notNull().unique(),
+  planType: planTypeEnum("planType").notNull(),
+  maxUses: integer("maxUses").default(0).notNull(),
+  currentUses: integer("currentUses").default(0).notNull(),
+  isActive: boolean("isActive").default(true).notNull(),
+  expiresAt: timestamp("expiresAt"),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+});
+
+export type PromoCode = typeof promoCodes.$inferSelect;
+export type InsertPromoCode = typeof promoCodes.$inferInsert;
+
+export const promoCodeUsage = pgTable("promoCodeUsage", {
+  id: serial("id").primaryKey(),
+  promoCodeId: integer("promoCodeId").notNull(),
+  professionalId: integer("professionalId").notNull(),
+  usedAt: timestamp("usedAt").defaultNow().notNull(),
+});
+
+export type PromoCodeUsage = typeof promoCodeUsage.$inferSelect;
+export type InsertPromoCodeUsage = typeof promoCodeUsage.$inferInsert;
+
+export const payments = pgTable("payments", {
+  id: serial("id").primaryKey(),
+  professionalId: integer("professionalId").notNull(),
+  amount: integer("amount").notNull(),
+  planType: planTypeEnum("planType").notNull(),
+  paymentMethod: paymentMethodEnum("paymentMethod"),
+  paymentStatus: paymentStatusEnum("paymentStatus").default("pending").notNull(),
+  transactionId: varchar("transactionId", { length: 255 }),
+  paymentGateway: varchar("paymentGateway", { length: 50 }),
+  subscriptionStartDate: timestamp("subscriptionStartDate"),
+  subscriptionEndDate: timestamp("subscriptionEndDate"),
+  isRecurring: boolean("isRecurring").default(true).notNull(),
+  nextBillingDate: timestamp("nextBillingDate"),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+  updatedAt: timestamp("updatedAt").defaultNow().notNull(),
+});
+
+export type Payment = typeof payments.$inferSelect;
+export type InsertPayment = typeof payments.$inferInsert;
+
+export const systemSettings = pgTable("systemSettings", {
+  id: serial("id").primaryKey(),
+  settingKey: varchar("settingKey", { length: 100 }).notNull().unique(),
+  settingValue: text("settingValue").notNull(),
+  description: text("description"),
+  updatedAt: timestamp("updatedAt").defaultNow().notNull(),
+  updatedBy: integer("updatedBy"),
+});
+
+export type SystemSetting = typeof systemSettings.$inferSelect;
+export type InsertSystemSetting = typeof systemSettings.$inferInsert;
