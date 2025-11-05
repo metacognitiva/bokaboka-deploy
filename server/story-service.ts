@@ -1,5 +1,5 @@
 import { getDb } from './db';
-import { stories, storyViews, type Story, type InsertStory } from '../drizzle/schema';
+import { stories, storyViews, type Story, type InsertStory } from "../drizzle/schema-pg";
 import { eq, and, gt, desc, sql, lt } from 'drizzle-orm';
 
 /**

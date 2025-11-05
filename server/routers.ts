@@ -70,7 +70,7 @@ export const appRouter = router({
         const db = await getDb();
         if (!db) throw new Error("Database not available");
         
-        const { users } = await import("../drizzle/schema");
+        const { users } = await import("../drizzle/schema-pg");
         const { eq } = await import("drizzle-orm");
         
         await db.update(users)
@@ -447,7 +447,7 @@ export const appRouter = router({
         const db = await getDb();
         if (!db) throw new Error("Database not available");
         
-        const { users } = await import("../drizzle/schema");
+        const { users } = await import("../drizzle/schema-pg");
         const { eq } = await import("drizzle-orm");
         
         return await db.select()
@@ -517,7 +517,7 @@ export const appRouter = router({
         const db = await getDb();
         if (!db) throw new Error("Database not available");
         
-        const { reports } = await import("../drizzle/schema");
+        const { reports } = await import("../drizzle/schema-pg");
         
         await db.insert(reports).values({
           reporterUserId: input.anonymous ? null : ctx.user.id,
@@ -539,7 +539,7 @@ export const appRouter = router({
         const db = await getDb();
         if (!db) throw new Error("Database not available");
         
-        const { reports, professionals } = await import("../drizzle/schema");
+        const { reports, professionals } = await import("../drizzle/schema-pg");
         const { eq, desc } = await import("drizzle-orm");
         
         const allReports = await db.select({
@@ -572,7 +572,7 @@ export const appRouter = router({
         const db = await getDb();
         if (!db) throw new Error("Database not available");
         
-        const { reports, moderationActions } = await import("../drizzle/schema");
+        const { reports, moderationActions } = await import("../drizzle/schema-pg");
         const { eq } = await import("drizzle-orm");
         
         // Update report status
@@ -615,7 +615,7 @@ export const appRouter = router({
         const db = await getDb();
         if (!db) throw new Error("Database not available");
         
-        const { reports } = await import("../drizzle/schema");
+        const { reports } = await import("../drizzle/schema-pg");
         const { eq } = await import("drizzle-orm");
         
         await db.update(reports)
@@ -669,7 +669,7 @@ export const appRouter = router({
         const db = await getDb();
         if (!db) throw new Error("Database not available");
         
-        const { professionals, reviews, users } = await import("../drizzle/schema");
+        const { professionals, reviews, users } = await import("../drizzle/schema-pg");
         const { sql, eq } = await import("drizzle-orm");
         
         // Total professionals
@@ -703,7 +703,7 @@ export const appRouter = router({
         const db = await getDb();
         if (!db) throw new Error("Database not available");
         
-        const { analytics: analyticsTable, reviews } = await import("../drizzle/schema");
+        const { analytics: analyticsTable, reviews } = await import("../drizzle/schema-pg");
         const { sql } = await import("drizzle-orm");
         
         // Aggregate all analytics data
@@ -742,7 +742,7 @@ export const appRouter = router({
         const db = await getDb();
         if (!db) throw new Error("Database not available");
         
-        const { payments, professionals } = await import("../drizzle/schema");
+        const { payments, professionals } = await import("../drizzle/schema-pg");
         const { sql, gte, eq } = await import("drizzle-orm");
         
         // Get date 30 days ago

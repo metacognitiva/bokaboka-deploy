@@ -1,7 +1,7 @@
 import type { Request, Response } from 'express';
 import { processWebhookNotification, calculateExpirationDate } from '../mercadopago-service';
 import { getDb } from '../db';
-import * as schema from '../../drizzle/schema';
+import * as schema from "../drizzle/schema-pg";
 import { eq } from 'drizzle-orm';
 
 /**

@@ -1,5 +1,5 @@
 import { eq, and, desc } from "drizzle-orm";
-import { follows, activities, badges, professionalBadges, analytics } from "../drizzle/schema";
+import { follows, activities, badges, professionalBadges, analytics } from "../drizzle/schema-pg";
 import { getDb } from "./db";
 
 // ===== FOLLOWS =====

@@ -1,5 +1,5 @@
 import { getDb } from "./db";
-import { referrals } from "../drizzle/schema";
+import { referrals } from "../drizzle/schema-pg";
 import { eq, and } from "drizzle-orm";
 
 /**
