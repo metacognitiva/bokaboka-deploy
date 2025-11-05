@@ -4,7 +4,7 @@ import { publicProcedure, protectedProcedure, router } from "./_core/trpc";
 import { z } from "zod";
 import { COOKIE_NAME } from "@shared/const";
 import { eq, desc } from "drizzle-orm";
-import * as schema from "../drizzle/schema";
+import * as schema from "../drizzle/schema-pg";
 import {
   searchProfessionals,
   getProfessionalById,
@@ -15,7 +15,6 @@ import {
   createCategory,
   getReviewsByProfessional,
   createReview,
-  createLead,
   isProfessionalActive,
   getDb,
 } from "./db";
@@ -437,21 +436,7 @@ export const appRouter = router({
       }),
   }),
 
-  leads: router({
-    create: protectedProcedure
-      .input(
-        z.object({
-          professionalId: z.number(),
-          notes: z.string().optional(),
-        })
-      )
-      .mutation(async ({ input, ctx }) => {
-        return await createLead({
-          ...input,
-          userId: ctx.user.id,
-        });
-      }),
-  }),
+  // leads router removed - table doesn't exist in schema-pg
 
   clients: router({
     getAll: protectedProcedure
