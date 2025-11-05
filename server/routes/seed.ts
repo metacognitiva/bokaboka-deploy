@@ -1,10 +1,15 @@
 import { Express } from "express";
-import { db } from "../db";
+import { getDb } from "../db";
 import { categories, professionals, reviews } from "../../drizzle/schema-pg";
 
 export function registerSeedRoute(app: Express) {
   app.get("/api/admin/seed", async (req, res) => {
     try {
+      const db = await getDb();
+      if (!db) {
+        return res.status(500).json({ success: false, error: "Database not available" });
+      }
+
       // Limpar dados existentes
       await db.delete(reviews);
       await db.delete(professionals);
@@ -12,21 +17,22 @@ export function registerSeedRoute(app: Express) {
 
       // Criar categorias
       const categoriesData = [
-        { name: "Psicologia", slug: "psicologia", icon: "🧠" },
-        { name: "Odontologia", slug: "odontologia", icon: "🦷" },
-        { name: "Pintura", slug: "pintura", icon: "🎨" },
-        { name: "Eletricista", slug: "eletricista", icon: "⚡" },
-        { name: "Encanador", slug: "encanador", icon: "🔧" },
-        { name: "Jardinagem", slug: "jardinagem", icon: "🌱" },
-        { name: "Limpeza", slug: "limpeza", icon: "🧹" },
-        { name: "Marcenaria", slug: "marcenaria", icon: "🪚" },
+        { name: "Psicologia", slug: "psicologia", icon: "🧠", isActive: true, displayOrder: 1 },
+        { name: "Odontologia", slug: "odontologia", icon: "🦷", isActive: true, displayOrder: 2 },
+        { name: "Pintura", slug: "pintura", icon: "🎨", isActive: true, displayOrder: 3 },
+        { name: "Eletricista", slug: "eletricista", icon: "⚡", isActive: true, displayOrder: 4 },
+        { name: "Encanador", slug: "encanador", icon: "🔧", isActive: true, displayOrder: 5 },
+        { name: "Jardinagem", slug: "jardinagem", icon: "🌱", isActive: true, displayOrder: 6 },
+        { name: "Limpeza", slug: "limpeza", icon: "🧹", isActive: true, displayOrder: 7 },
+        { name: "Marcenaria", slug: "marcenaria", icon: "🪚", isActive: true, displayOrder: 8 },
       ];
 
       await db.insert(categories).values(categoriesData);
 
-      // Criar profissionais
+      // Criar profissionais com avatares genéricos
       const professionalsData = [
         {
+          uid: "prof1",
           displayName: "Dra. Ana Paula Silva",
           category: "Psicologia",
           city: "São Paulo",
@@ -40,8 +46,12 @@ export function registerSeedRoute(app: Express) {
           reviewCount: 45,
           latitude: -23.5505,
           longitude: -46.6333,
+          verificationStatus: "approved" as const,
+          isActive: true,
+          stars: 49,
         },
         {
+          uid: "prof2",
           displayName: "Dr. Carlos Mendes",
           category: "Odontologia",
           city: "São Paulo",
@@ -55,8 +65,12 @@ export function registerSeedRoute(app: Express) {
           reviewCount: 38,
           latitude: -23.5505,
           longitude: -46.6333,
+          verificationStatus: "approved" as const,
+          isActive: true,
+          stars: 48,
         },
         {
+          uid: "prof3",
           displayName: "João Pereira",
           category: "Pintura",
           city: "Rio de Janeiro",
@@ -69,8 +83,12 @@ export function registerSeedRoute(app: Express) {
           reviewCount: 52,
           latitude: -22.9068,
           longitude: -43.1729,
+          verificationStatus: "approved" as const,
+          isActive: true,
+          stars: 47,
         },
         {
+          uid: "prof4",
           displayName: "Ricardo Santos",
           category: "Eletricista",
           city: "São Paulo",
@@ -83,8 +101,12 @@ export function registerSeedRoute(app: Express) {
           reviewCount: 67,
           latitude: -23.5505,
           longitude: -46.6333,
+          verificationStatus: "approved" as const,
+          isActive: true,
+          stars: 49,
         },
         {
+          uid: "prof5",
           displayName: "Marcos Oliveira",
           category: "Encanador",
           city: "Belo Horizonte",
@@ -97,8 +119,12 @@ export function registerSeedRoute(app: Express) {
           reviewCount: 41,
           latitude: -19.9167,
           longitude: -43.9345,
+          verificationStatus: "approved" as const,
+          isActive: true,
+          stars: 46,
         },
         {
+          uid: "prof6",
           displayName: "Fernanda Costa",
           category: "Jardinagem",
           city: "São Paulo",
@@ -111,8 +137,12 @@ export function registerSeedRoute(app: Express) {
           reviewCount: 33,
           latitude: -23.5505,
           longitude: -46.6333,
+          verificationStatus: "approved" as const,
+          isActive: true,
+          stars: 48,
         },
         {
+          uid: "prof7",
           displayName: "Limpeza Total - Maria Silva",
           category: "Limpeza",
           city: "Rio de Janeiro",
@@ -125,8 +155,12 @@ export function registerSeedRoute(app: Express) {
           reviewCount: 78,
           latitude: -22.9068,
           longitude: -43.1729,
+          verificationStatus: "approved" as const,
+          isActive: true,
+          stars: 49,
         },
         {
+          uid: "prof8",
           displayName: "Paulo Marcenaria",
           category: "Marcenaria",
           city: "Curitiba",
@@ -139,8 +173,12 @@ export function registerSeedRoute(app: Express) {
           reviewCount: 29,
           latitude: -25.4284,
           longitude: -49.2733,
+          verificationStatus: "approved" as const,
+          isActive: true,
+          stars: 47,
         },
         {
+          uid: "prof9",
           displayName: "Dra. Beatriz Almeida",
           category: "Psicologia",
           city: "São Paulo",
@@ -154,8 +192,12 @@ export function registerSeedRoute(app: Express) {
           reviewCount: 56,
           latitude: -23.5505,
           longitude: -46.6333,
+          verificationStatus: "approved" as const,
+          isActive: true,
+          stars: 49,
         },
         {
+          uid: "prof10",
           displayName: "Dr. Roberto Lima",
           category: "Odontologia",
           city: "Fortaleza",
@@ -169,6 +211,9 @@ export function registerSeedRoute(app: Express) {
           reviewCount: 44,
           latitude: -3.7172,
           longitude: -38.5433,
+          verificationStatus: "approved" as const,
+          isActive: true,
+          stars: 48,
         },
       ];
 
