@@ -1,7 +1,7 @@
 import { eq, like, and, or, desc, sql } from "drizzle-orm";
 import { drizzle } from "drizzle-orm/postgres-js";
 import postgres from "postgres";
-import { InsertUser, users, professionals, categories, reviews, leads, InsertProfessional, InsertCategory, InsertReview, InsertLead } from "../drizzle/schema-pg";
+import { InsertUser, users, professionals, categories, reviews, InsertProfessional, InsertCategory, InsertReview } from "../drizzle/schema-pg";
 import { ENV } from './_core/env';
 
 let _db: ReturnType<typeof drizzle> | null = null;
@@ -254,27 +254,7 @@ export async function createReview(data: InsertReview) {
   return result[0];
 }
 
-// Lead queries
-export async function createLead(data: InsertLead) {
-  const db = await getDb();
-  if (!db) throw new Error("Database not available");
-
-  const result = await db.insert(leads).values(data).returning();
-  return result[0];
-}
-
-export async function getLeadsByProfessional(professionalId: number) {
-  const db = await getDb();
-  if (!db) return [];
-
-  const result = await db
-    .select()
-    .from(leads)
-    .where(eq(leads.professionalId, professionalId))
-    .orderBy(desc(leads.createdAt));
-
-  return result;
-}
+// Lead queries removed - table doesn't exist in schema-pg
 
 // Helper to check if professional is in active period (trial or subscription)
 export function isProfessionalActive(professional: typeof professionals.$inferSelect): boolean {
